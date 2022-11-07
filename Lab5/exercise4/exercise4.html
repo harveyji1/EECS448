@@ -1,0 +1,64 @@
+<style>
+#dummyPara {
+	border-style: solid;
+	border-width: 0;
+	background-color: white;
+	margin: 50px 200px 0px 200px
+}
+
+label{
+	display: inline-block;
+	float: left;
+	clear: left;
+	width: 50px;
+	text-align: right;
+}
+
+input {
+	display: inline-block;
+	float: left;
+}
+</style>
+<body>
+	<div id="dummyPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+	sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+	Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+	Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+	Excepteur sint occaecat cupidatat non proident, 
+	sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div><br>
+	  <br><p2>Border(rgb 0-255)</p2><br><br>
+	   <label>Red:</label>
+      <input type="text" id="borR" name="borR"><br><br>
+	  <label for="borG">Green:</label>
+      <input type="text" id="borG" name="borG"><br><br>
+	  <label for="borB">Blue:</label>
+      <input type="text" id="borB" name="borB"><br><br>
+	  <label for="borWidth">Width:</label>
+      <input type="text" id="borWidth" name="borWidth"><br><br>
+	  <br><p2>Background(rgb 0-255)</p2><br><br>
+	   <label for="bkgR">Red:</label>
+      <input type="text" id="bkgR" name="bkgR"><br><br>
+	  <label for="bkgG">Green:</label>
+      <input type="text" id="bkgG" name="bkgG"><br><br>
+	   <label for="bkgB">Blue:</label>
+      <input type="text" id="bkgB" name="bkgB"><br><br>
+	   <button onclick="changeStyle()">Change Style</button>
+    </body> 
+	<script>
+	function changeStyle(){
+	
+	 var backRed = document.getElementById("bkgR").value;
+     var backGreen = document.getElementById("bkgG").value;
+	 var backBlue = document.getElementById("bkgB").value;
+	 var borRed = document.getElementById("borR").value;
+     var borGreen = document.getElementById("borG").value;
+	 var borBlue = document.getElementById("borB").value;
+	 var borWidth = document.getElementById("borWidth").value;
+		document.getElementById("dummyPara").style.borderWidth = borWidth;
+		document.getElementById("dummyPara").style.borderColor = 
+			"rgb("+borRed+","+borGreen+","+borBlue+")";
+		document.getElementById("dummyPara").style.backgroundColor = 
+		'rgb(' + backRed + ',' + backGreen + ',' + backBlue + ')';
+	}	
+	</script>
