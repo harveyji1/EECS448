@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+img {
+  max-width: 100%
+}
+
+.image {
+  flex-basis: 100%
+  padding-left: 50px;
+}
+
+.text {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #FFFDD0;
+  color: gray;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.link { 
+color: red !important;
+}
+
+.link:hover { 
+color: blue !important;
+ }
