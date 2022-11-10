@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise3</title>
+	<script src="formChecker.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<center><h1>Harvey's Sock Store</h1></center>
+	<form name="store" method="POST" action="customerBackend.php" onsubmit="return submitCheck()">
+	<p>Please enter your username and password<p>
+	<label for="username" class="userPass">Username: </label>
+	<input type="email" id="username" name="username" required> <br> <br>
+	<label for="password" class="userPass">Password: </label>
+	<input type="password" id="password" name="password" required> <br> <br>
+
+	<p>Please enter the quantity of each item that you would like to purchase</p> <br>
+	<label for="leftSock" class="sock">Left Sock ($2.00 each): </label>
+	<input type="number" id="leftSock" name="leftSock" required> <br><br>
+	<label for="rightSock" class="sock">Right Sock ($3.00 each): </label>
+	<input type="number" id="rightSock" name="rightSock" required> <br><br>
+	<label for="middleSock" class="sock">Middle Sock ($9.00 each): </label>
+	<input type="number" id="middleSock" name="middleSock" required> <br> <br>
+	
+	<p>Please select the option for shipping you would like:</p>
+	<input type="radio" id="7day" name="shipping" value="7" required>
+	<label for="7day">Free 7 day</label> <br>
+	<input type="radio" id="3day" name="shipping" value="3"> 
+	<label for="3day">$5.00 3 day</label><br> 
+	<input type="radio" id="1day" name="shipping" value="1">
+	<label for="1day">$50.00 over night</label> <br><br>
+
+	<input type="submit" id="subButton" value="Submit">
+	<input type="reset" id="reset" value="Reset">
+	</form>
+</body>
+</html>
